@@ -1,0 +1,16 @@
+name: 03-workflow-runners
+on: push
+
+jobs:
+    ubuntu-echos:
+        runs-on: ubuntu-latest
+        steps:
+            - name: show-os-name
+              run: |
+                echo "OS Name: $RUNNER_OS"
+                echo "OS Version: $RUNNER_OS_VERSION"
+                echo "OS Architecture: $RUNNER_ARCH"
+                echo "OS Name: $RUNNER_NAME"
+                echo "OS Version: $RUNNER_VERSION"
+                echo "OS Temp Directory: $RUNNER_TEMP"
+                echo "OS Workspace Directory: $RUNNER_WORKSPACE"
